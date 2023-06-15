@@ -1,3 +1,30 @@
-p {
-    color:green;
+body {
+    background-color: beige;
+}
+
+h1 {
+    font-style: italic;
+    border-bottom: solid 5px black;
+}
+
+h2 {
+    border-bottom: dotted 5px purple;
+}
+
+h3 {
+    border-bottom: dotted 5px purple;
+}
+
+a:link,a:visited{
+    color:blue;
+}
+
+a:hover {
+    text-decoration: none;
+    color:rebeccapurple;
+}
+
+div {
+    border:solid 5px black;
+    padding: 5px 5px 5px 5px;
 }
