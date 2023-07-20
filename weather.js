@@ -46,7 +46,33 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-for (let n of data) {
-  console.log(data);
+console.log(data.coord.lon);
+console.log(data.coord.lat);
+for (let i = 0;i <data.weather.length; i=i+1 ) {
+  console.log(data.weather[i]);
 }
+console.log(data.base);
+console.log(data.main.temp);
+console.log(data.main.feels_like);
+console.log(data.main.temp_min);
+console.log(data.main.temp_max);
+console.log(data.main.pressure);
+console.log(data.main.humidity);
+console.log(data.main.sea_level);
+console.log(data.main.grnd_level);
+console.log(data.visibility);
+console.log(data.wind.speed);
+console.log(data.wind.deg);
+console.log(data.wind.gust);
+console.log(data.clouds.all);
+console.log(data.dt);
+console.log(data.sys.type);
+console.log(data.sys.id);
+console.log(data.sys.country);
+console.log(data.sys.sunrise);
+console.log(data.sys.sunset);
+console.log(data.timezone);
+console.log(data.id);
+console.log(data.name);
+console.log(data.cpd);
 

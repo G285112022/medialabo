@@ -2,14 +2,15 @@
 let kotae = Math.floor(Math.random()*10) + 1;
 console.log('答え（デバッグ用）: ' + kotae);
 
+let Eve = document.querySelector('button#kaitou');
+Eve.addEventListener('click', hantei);
+
 // 入力回数（予想回数）
 let kaisu = 0;
 
-function hantei(event) {
+function hantei() {
     let i = document.querySelector('input[name="suuji"]');
     let yoso = Number(i.value);
-
-    let b1 = event.target;
 
   // 課題3-1: 正解判定する
   kaisu++;
