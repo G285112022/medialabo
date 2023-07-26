@@ -85,4 +85,57 @@ p0.insertAdjacentElement('beforeend', p1);
 w.insertAdjacentElement('beforeend', p0);
 
 
+//////////　ここからイベント処理
+let Eve = document.querySelector('button#getweather()');
+Eve.addEventListener('click', getWeather());
 
+function getWeather() {
+  const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
+  const cityInput = document.getElementById('cityInput').value;
+  const apiUrl = `https://www.nishita-lab.org/web-contents/jsons/openweather/${cityInput}.json`;
+
+  fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        console.log("緯度: " + data.coord.lon);
+        console.log("経度: " + data.coord.lat);
+        console.log("天気: " + data.weather[0].description);
+        console.log("最低気温: " + data.main.temp_min);
+        console.log("最高気温: " + data.main.temp_max);
+        console.log("湿度: " + data.main.humidity);
+        console.log("風速: " + data.wind.speed);
+        console.log("風向: " + data.wind.deg);
+        console.log("都市名: " + data.name);
+          let x = document.querySelector('div#kensaku');
+let p0 = document.createElement('p');
+p0.textContent = ('緯度: ' + data.coord.lon);
+let p1 = document.createElement('p');
+p1.textContent = ('経度: ' + data.coord.lat);
+let p2 = document.createElement('p');
+p2.textContent = ('天気: ' + data.weather[0].description);
+let p3 = document.createElement('p');
+p3.textContent = ('最低気温: ' + data.main.temp_min);
+let p4 = document.createElement('p');
+p4.textContent = ('最高気温: ' + data.main.temp_max);
+let p5 = document.createElement('p');
+p5.textContent = ('湿度: ' + data.main.humidity);
+let p6 = document.createElement('p');
+p6.textContent = ('風速: ' + data.wind.speed);
+let p7 = document.createElement('p');
+p7.textContent = ('風向: ' + data.wind.deg);
+let p8 = document.createElement('p');
+p8.textContent = ('都市名: ' + data.name);
+p7.insertAdjacentElement('beforeend', p8);
+p6.insertAdjacentElement('beforeend', p7);
+p5.insertAdjacentElement('beforeend', p6);
+p4.insertAdjacentElement('beforeend', p5);
+p3.insertAdjacentElement('beforeend', p4);
+p2.insertAdjacentElement('beforeend', p3);
+p1.insertAdjacentElement('beforeend', p2);
+p0.insertAdjacentElement('beforeend', p1);
+w.insertAdjacentElement('beforeend', p0);
+      })
+      .catch(error => {
+          console.error('天気情報を取得できませんでした', error);
+      });
+}

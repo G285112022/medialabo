@@ -1,16 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
     <title>プロジェクト課題</title>
     <script src="weather.js" defer></script>
     <link rel="stylesheet" href="project.css">
-  </head>
-  <body>
-    <label for="ID">都市IDを入力</label>
-        <input type="text" name="ID" size="7">
-        <button id="kaitou">検索</button>
-    <div id="result"></div>
-  </body>
-  </html>
+</head>
+<body>
+    <label for="cityInput">都市IDを入力</label>
+    <input type="text" id="cityInput">
+    <button onclick="getWeather()">天気を検索</button>
+    <table>
+      <thead id="my-table">
+        <tr>
+          <th>都市名</th>
+          <th>都市ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>カイロ</td>
+          <td>360630</td>
+        </tr>
+        <tr>
+          <td>モスクワ</td>
+          <td>524901</td>
+        </tr>
+        <tr>
+          <td>ヨハネスブルク</td>
+          <td>993800</td>
+        </tr>
+        <tr>
+          <td>北京</td>
+          <td>1816670</td>
+        </tr>
+        <tr>
+          <td>東京</td>
+          <td>1850147</td>
+        </tr>
+        <tr>
+          <td>シンガポール</td>
+          <td>1880252</td>
+        </tr>
+        <tr>
+          <td>シドニー</td>
+          <td>2147714</td>
+        </tr>
+        <tr>
+          <td>ロンドン</td>
+          <td>2643743</td>
+        </tr>
+        <tr>
+          <td>パリ</td>
+          <td>2968815</td>
+        </tr>
+        <tr>
+          <td>リオデジャネイロ</td>
+          <td>3451189</td>
+        </tr>
+        <tr>
+          <td>ニューヨーク</td>
+          <td>5128581</td>
+        </tr>
+        <tr>
+          <td>ロサンゼルス</td>
+          <td>5368361</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div id="result">
+      <div id="kensaku"></div>
+</body>
+</html>
+
   

@@ -7,3 +7,19 @@ h1 {
     background-color: aqua;
     border-bottom: solid 5px blue;
 }
+
+#my-table {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  #my-table td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  #my-table th {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
